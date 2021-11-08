@@ -4,16 +4,21 @@ public class Hero {
     private int health;
     private int damage;
     private String power;
+    private String name;
 
-    public Hero(int health, int damage, String power) {
+    public Hero(String name, int health, int damage, String power) {
+        this.name = name;
         this.health = health;
         this.damage = damage;
         this.power = power;
+
     }
 
-    public Hero(int health, int damage) {
+    public Hero(String name, int health, int damage) {
+        this.name = name;
         this.health = health;
         this.damage = damage;
+
     }
 
     public int getHealth() {
@@ -26,5 +31,9 @@ public class Hero {
 
     public String getPower() {
         return power;
+    }
+
+    public String getName() {
+        return name;
     }
 }
