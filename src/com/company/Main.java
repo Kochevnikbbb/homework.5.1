@@ -1,7 +1,7 @@
 package com.company;
 
 public class Main {
-
+    //private Hero[] dc;
 
     public static void main(String[] args) {
 
@@ -11,8 +11,11 @@ public class Main {
         satana.setShield("Барьер");
         System.out.println("Сатана " + satana.getHealth() + "XP " + satana.getDamage()+ " DD " + satana.getShield()+" PP");
 
-        createHeroes();
+        Hero[] dc = createHeroes();
+        for (int i = 0; i < dc.length; i++) {
+            System.out.println(dc[i].getName() + " - " + dc[i].getHealth() + "хп " + dc[i].getDamage() + "дд суперспособность: " + dc[i].getPower());
 
+        }
 
 
     }
@@ -22,10 +25,6 @@ public class Main {
         Hero superMan = new Hero("Супермен",800,100);
         Hero[] dc = {spiderMan,batMan,superMan};
 
-        for (int i = 0; i < dc.length; i++) {
-            System.out.println(dc[i].getName() + " - " + dc[i].getHealth() + "хп " + dc[i].getDamage() + "дд суперспособность: " + dc[i].getPower());
-
-        }
         return dc;
     }
 }
